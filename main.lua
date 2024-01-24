@@ -1,3 +1,21 @@
+y = 300
+x = 400
 function love.draw()
-  love.graphics.print("Hello, world!", 400, 300)
+  love.graphics.setColor(0, 1, 0, 0.7)
+  love.graphics.setBackgroundColor(0.02, 0.1, 0.03)
+  love.graphics.print("@", x, y)
 end
+function love.keypressed(key)
+  if key == 's' then 
+    y = y+30
+  end
+  if key == 'w' then
+    y = y-30
+  end
+  if key == 'a' then
+    x = x-30
+  end
+  if key == 'd' then
+    x = x+30
+  end
+end    
