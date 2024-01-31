@@ -2,10 +2,13 @@ y = 300
 x = 400
 speed = 30
 
+function love.load()
+  froggy = love.graphics.newImage("sprites/Froggy's face.png")
+end
+
 function love.draw()
-  love.graphics.setColor(0, 1, 0, 0.7)
+  love.graphics.draw(froggy, x, y)
   love.graphics.setBackgroundColor(0.02, 0.1, 0.03)
-  love.graphics.print("@", x, y)
 end
 
 function love.keypressed(key)
